@@ -64,7 +64,10 @@ const Login = (props) => {
       setLoading(false);
     }
   };
-
+  const handleLoginForm = (e) => {
+    props.history.push("/questionform");
+    window.location.reload();
+  };
   return (
     <div className="col-md-12">
       <div className="card card-container">
@@ -74,7 +77,7 @@ const Login = (props) => {
           className="profile-img-card"
         />
 
-        <Form onSubmit={handleLogin} ref={form}>
+        <Form onSubmit={handleLoginForm} ref={form}>
           <div className="form-group">
             <label htmlFor="username">Username</label>
             <Input
@@ -83,7 +86,7 @@ const Login = (props) => {
               name="username"
               value={username}
               onChange={onChangeUsername}
-              validations={[required]}
+              //validations={[required]}
             />
           </div>
 

@@ -1,7 +1,7 @@
 import {useReactMediaRecorder} from "react-media-recorder";
 import React, {useEffect, useState} from "react";
 
-const Question = (props) => {
+const Answer = (props) => {
     const [parentStatus, setParentStatus] = useState('');
     const {
         status,
@@ -32,7 +32,7 @@ const Question = (props) => {
     }, [props.isReset]);
     return (
         <div>
-            <span>Question</span>
+            <span>Answer</span>
             <p>{status}</p>
             <button onClick={startRecording}>Start Recording</button>
             <button onClick={stopRecording}>Stop Recording</button>
@@ -40,4 +40,4 @@ const Question = (props) => {
         </div>
     );
 };
-export default Question
+export default Answer

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d735917b-30ec-4ac3-abaf-5e4af06bb3a8" name="Default Changelist" comment="">
+    <list default="true" id="d735917b-30ec-4ac3-abaf-5e4af06bb3a8" name="Default Changelist" comment="parent prop change is added">
+      <change afterPath="$PROJECT_DIR$/src/components/Answer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Question.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/QuestionForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionForm.js" afterDir="false" />
     </list>
@@ -88,8 +90,16 @@
       <workItem from="1608362283384" duration="13470000" />
       <workItem from="1608430484441" duration="2258000" />
       <workItem from="1608433828850" duration="18745000" />
-      <workItem from="1608564722137" duration="16071000" />
+      <workItem from="1608564722137" duration="19662000" />
     </task>
+    <task id="LOCAL-00001" summary="parent prop change is added">
+      <created>1608621260477</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608621260479</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,5 +116,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="parent prop change is added" />
+    <option name="LAST_COMMIT_MESSAGE" value="parent prop change is added" />
   </component>
 </project>
