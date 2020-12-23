@@ -1,6 +1,6 @@
 import {useReactMediaRecorder} from "react-media-recorder";
 import React, {useEffect, useState} from "react";
-
+import Recording from "./Recording";
 const Question = (props) => {
     const [parentStatus, setParentStatus] = useState('');
     const {

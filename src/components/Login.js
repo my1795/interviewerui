@@ -45,7 +45,7 @@ const Login = (props) => {
     if (checkBtn.current.context._errors.length === 0) {
       AuthService.login(username, password).then(
         () => {
-          props.history.push("/profile");
+          props.history.push("/questionform");
           window.location.reload();
         },
         (error) => {
@@ -77,7 +77,7 @@ const Login = (props) => {
           className="profile-img-card"
         />
 
-        <Form onSubmit={handleLoginForm} ref={form}>
+        <Form onSubmit={handleLogin} ref={form}>
           <div className="form-group">
             <label htmlFor="username">Username</label>
             <Input
@@ -86,7 +86,7 @@ const Login = (props) => {
               name="username"
               value={username}
               onChange={onChangeUsername}
-              //validations={[required]}
+              validations={[required]}
             />
           </div>
 

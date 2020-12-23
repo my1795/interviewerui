@@ -1,13 +1,18 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:6161/candidate/form/hruser/";
+const API_URL = "http://localhost:6161/hruser/";
 
 const register = (username, email, password) => {
   return axios.post(API_URL + "register", {
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+    },
     username,
     email,
     password,
   });
+
 };
 
 const login = (username, password) => {

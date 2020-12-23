@@ -5,7 +5,7 @@ import "./App.css";
 
 import AuthService from "./services/auth.service";
 
-import Login from "./components/Login";
+import  Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
@@ -24,8 +24,8 @@ const App = () => {
 
     if (user) {
       setCurrentUser(user);
-      setShowModeratorBoard(user.roles.includes("ROLE_MODERATOR"));
-      setShowAdminBoard(user.roles.includes("ROLE_ADMIN"));
+     // setShowModeratorBoard(user.roles.includes("ROLE_MODERATOR"));
+      //setShowAdminBoard(user.roles.includes("ROLE_ADMIN"));
     }
   }, []);
 
