@@ -26,7 +26,7 @@ const positionregister = async (fileUrl,position) => {
         console.log(base64data);
         var bodyFormData = new FormData();
         bodyFormData.set("questionRecording", base64data);
-        console.log(base64data);
+        console.log("Sent blob is : "+ base64data)
         return axios.post(API_URL +"positionregister", {
             headers: {
                 "Content-Type": "application/json",

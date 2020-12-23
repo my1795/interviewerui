@@ -64,10 +64,6 @@ const Login = (props) => {
       setLoading(false);
     }
   };
-  const handleLoginForm = (e) => {
-    props.history.push("/questionform");
-    window.location.reload();
-  };
   return (
     <div className="col-md-12">
       <div className="card card-container">
