@@ -13,7 +13,8 @@ import BoardUser from "./components/BoardUser";
 import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
 import QuestionForm from "./components/QuestionForm";
-
+import Candidates from "./components/Candidates";
+import Interviews from "./components/Interviews";
 const App = () => {
   const [showModeratorBoard, setShowModeratorBoard] = useState(false);
   const [showAdminBoard, setShowAdminBoard] = useState(false);
@@ -33,6 +34,11 @@ const App = () => {
     AuthService.logout();
   };
 
+  function reload() {
+    setTimeout(function () {
+      window.location.reload();
+    }, 1000);
+  }
   return (
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
@@ -45,6 +51,16 @@ const App = () => {
           <li className="nav-item">
             <Link to={"/questionform"} className="nav-link">
               QuestionForm
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to={"/candidates"} onClick={reload} className="nav-link">
+              Candidates
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to={"/interviews"} onClick={reload} className="nav-link">
+              Interviews
             </Link>
           </li>
           {showModeratorBoard && (
@@ -107,6 +123,8 @@ const App = () => {
           <Route exact path={["/", "/home"]} component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/questionform" component={QuestionForm} />
+          <Route exact path="/candidates" component={Candidates} />
+          <Route exact path="/interviews" component={Interviews} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/profile" component={Profile} />
           <Route path="/user" component={BoardUser} />

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d735917b-30ec-4ac3-abaf-5e4af06bb3a8" name="Default Changelist" comment="Bae64 encoder is added">
+    <list default="true" id="d735917b-30ec-4ac3-abaf-5e4af06bb3a8" name="Default Changelist" comment="position set is added">
+      <change afterPath="$PROJECT_DIR$/src/components/Candidates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Interviews.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/QuestionForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/data.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/data.service.js" afterDir="false" />
     </list>
@@ -89,7 +93,8 @@
       <workItem from="1608362283384" duration="13470000" />
       <workItem from="1608430484441" duration="2258000" />
       <workItem from="1608433828850" duration="18745000" />
-      <workItem from="1608564722137" duration="41540000" />
+      <workItem from="1608564722137" duration="61591000" />
+      <workItem from="1608786032104" duration="1938000" />
     </task>
     <task id="LOCAL-00001" summary="parent prop change is added">
       <created>1608621260477</created>
@@ -112,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608716208457</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="position set is added">
+      <created>1608718848554</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608718848555</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +146,7 @@
     <MESSAGE value="parent prop change is added" />
     <MESSAGE value="redirecting from Login to QuestionForm is added" />
     <MESSAGE value="Bae64 encoder is added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bae64 encoder is added" />
+    <MESSAGE value="position set is added" />
+    <option name="LAST_COMMIT_MESSAGE" value="position set is added" />
   </component>
 </project>

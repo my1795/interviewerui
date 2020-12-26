@@ -13,9 +13,10 @@ const QuestionForm = () => {
     const checkBtn = useRef();
 
 
-    const [questionMedia, setQuestionMedia] = useState('');
-    const [answerMedia, setAnswerMedia] = useState('');
+    const [questionMedia, setQuestionMedia] = useState(null);
+    const [answerMedia, setAnswerMedia] = useState(null);
     const [position, setPosition] = useState('defaultPosition');
+    const [candidateEmail, setCandidateEmail] = useState('');
     const [reset, setReset] = useState(false);
 
 
@@ -27,19 +28,35 @@ const QuestionForm = () => {
         const position = e.target.value;
         setPosition(position);
     };
+    const onChaneCandidateEmail = (e) => {
+        const position = e.target.value;
+        setCandidateEmail(candidateEmail);
+    };
     const handlePosition = (e) => {
 
     }
-    const nextQuestion = () => {
+    const nextQuestion = async () => {
+        if(questionMedia == null || answerMedia == null){
+            alert("Please set inputs")
+        }
         setReset(true)
-        DataService.positionregister(questionMedia,position)
-        handleMediaBlob(null,null)
+        await DataService.positionregister(questionMedia,position)
+        await DataService.answerRegister(answerMedia, localStorage.getItem("idealAnswerID" ))
+
+
+        const id = await
+        console.log("Answer id in form "+ localStorage.getItem("idealAnswerID" ))
+        console.log("Result of first request " +id)
+
+        localStorage.removeItem("idealAnswerID")
+        handleQuestionMediaBlob(null)
+        handleAnswerMediaBlob(null)
     };
-    const handleMediaBlob = (questionMedia,answerMedia) => {
-        setQuestionMedia(questionMedia)
-        setAnswerMedia(answerMedia)
-        console.log("Parent questionMedia  " + questionMedia)
-        console.log("Parent answerMedia " + answerMedia)
+    const handleQuestionMediaBlob = (media) => {
+        setQuestionMedia(media)
+    };
+    const handleAnswerMediaBlob = (media) => {
+        setAnswerMedia(media)
     };
     return (
         <div>
@@ -54,11 +71,21 @@ const QuestionForm = () => {
                     onChange={onChangePosition}
                 />
             </div>
+                <div className="form-group">
+                    <label htmlFor="username">CandidateEmail</label>
+                    <Input
+                        type="text"
+                        className="form-control"
+                        name="username"
+                        value={candidateEmail}
+                        onChange={onChaneCandidateEmail}
+                    />
+                </div>
                 <CheckButton style={{ display: "none" }} ref={checkBtn} />
             </Form>
             <button onClick={nextQuestion}> Move to Next Question</button>
-            <Question parentCallBack={handleMediaBlob} isReset={reset} setReset={setReset}></Question>
-            <Answer parentCallBack={handleMediaBlob} isReset={reset} setReset={setReset}></Answer>
+            <Question parentCallBack={handleQuestionMediaBlob} isReset={reset} setReset={setReset}></Question>
+            <Answer parentCallBack={handleAnswerMediaBlob} isReset={reset} setReset={setReset}></Answer>
             <button> Finish Interview Form</button>
         </div>
     );
